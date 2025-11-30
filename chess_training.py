@@ -447,7 +447,7 @@ def main():
     # Main training pipeline - runs the entire thing
     
     # Configuration
-    CSV_PATH = "/content/filtered_chess_games.csv"  # Path to the chess dataset
+    CSV_PATH = "filtered_chess_games.csv"  # Path to the chess dataset
     MIN_ELO = 2000 # To filter out lower rated games
     MAX_GAMES = None  # Set to a number to limit games for testing (e.g., 1000)
     BATCH_SIZE = 256
