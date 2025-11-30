@@ -450,7 +450,7 @@ def main():
     CSV_PATH = "filtered_chess_games.csv"  # Path to the chess dataset
     MIN_ELO = 2000 # To filter out lower rated games
     MAX_GAMES = None  # Set to a number to limit games for testing (e.g., 1000)
-    BATCH_SIZE = 256
+    BATCH_SIZE = 1024
     NUM_EPOCHS = 10
     LEARNING_RATE = 0.001
     TRAIN_SPLIT = 0.9
