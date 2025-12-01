@@ -416,7 +416,7 @@ def save_model(
     model: nn.Module,
     uci_to_idx: Dict[str, int],
     idx_to_uci: Dict[int, str],
-    model_path: str = "model.pth",
+    model_path: str = "model_v2.pth",
     mapping_path: str = "move_mappings.json"
 ):
     # Save the trained model and move mappings.
@@ -447,7 +447,7 @@ def main():
     # Main training pipeline - runs the entire thing
     
     # Configuration
-    CSV_PATH = "filtered_chess_games.csv"  # Path to the chess dataset
+    CSV_PATH = "elite_games.csv"  # Path to the chess dataset
     MIN_ELO = 2000 # To filter out lower rated games
     MAX_GAMES = None  # Set to a number to limit games for testing (e.g., 1000)
     BATCH_SIZE = 1024
@@ -458,8 +458,8 @@ def main():
     # Detect device
     if torch.cuda.is_available():
         device = torch.device('cuda')
-    elif torch.backends.mps.is_available():
-        device = torch.device('mps') # for training on MacOS; NOT TESTED
+    #elif torch.backends.mps.is_available():
+    #   device = torch.device('mps') # for training on MacOS; NOT TESTED
     else:
         device = torch.device('cpu')
 
