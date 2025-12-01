@@ -1,0 +1,7 @@
+chess_inference.py
+*.pgn
+*.csv
+*.zip
+pgn_to_csv
+*.pth
+.DS_STORE
